@@ -1,0 +1,29 @@
+extends layout.pug 
+
+
+block content
+  .page-wrapper
+    .container.mt-5
+      .row.justify-content-center
+        .col-md-6
+          .card
+            .card-body
+              h2.card-title.text-center.mb-4 Registro
+              form(action="/register" method="POST" enctype="multipart/form-data")
+                .mb-3
+                  label.form-label(for="nome") Nome
+                  input.form-control(type="text" name="nome" id="nome" placeholder="Nome" required)
+                .mb-3
+                  label.form-label(for="email") Email
+                  input.form-control(type="email" name="email" id="email" placeholder="Email" required)
+                .mb-3
+                  label.form-label(for="senha") Senha
+                  input.form-control(type="password" name="senha" id="senha" placeholder="Senha" required)
+                .mb-3
+                  label.form-label(for="foto") Foto
+                  input.form-control(type="file" name="foto" id="foto" required)
+                button.btn.btn-primary.w-100(type="submit") Registrar
+              if error
+                p.text-danger.mt-3.text-center #{error}
+              .text-center.mt-3
+                a.btn.btn-warning.w-100(href="/login") Login

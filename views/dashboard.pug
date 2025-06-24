@@ -1,0 +1,12 @@
+extends layout.pug 
+
+
+block content
+  .page-wrapper
+    main.content
+      div.nome
+        h2 Bem-vindo, #{user.nome}!
+        if user.foto
+          img(src=`/uploads/${user.foto}`, width="150", height="150", style="border-radius: 50%")
+        p Email: #{user.email}
+        a(href="/logout") Sair

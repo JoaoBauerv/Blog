@@ -1,0 +1,32 @@
+//- header.jade
+doctype html
+html
+  head
+    title Meu Site Escuro
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css")
+
+    
+  body
+    header.header-bar
+      .left-section
+        img.logo(src="/images/logo.default", alt="Logo")
+        nav.nav-links
+          a(href="/") About me
+          a(href="/posts") Posts
+      .right-section
+        .search-box
+          i.fas.fa-search
+          input(type="text", placeholder="Search")
+          span.shortcut ⌘K
+        .dropdown
+          div.dropdown
+            button#dropdownMenuButton.dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type="button", data-bs-toggle="dropdown", aria-haspopup="true", aria-expanded="false") MENU
+            div.dropdown-menu(aria-labelledby="dropdownMenuButton")
+              a.dropdown-item(href="/login") Login
+              a.dropdown-item(href="/register") Cadastrar
+              a.dropdown-item(href="#") Something else here
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js")
