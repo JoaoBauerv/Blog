@@ -16,13 +16,13 @@ block content
     section#about-me.about-section.container.mt-5
       .row
         .col-md-6
-          h1 Hello!
-          p I'm a software engineer based in Brazil that likes to create things.
-          p I also have a degree in Systems Analysis and Development from the Federal Institute of Education, Science and Technology in Rio Grande do Sul.
-          p I like to play games, play acoustic guitar, and mess around with Blender.
+          h1(data-aos="fade-up")  Hello!
+          p(data-aos="fade-up" data-aos-delay="100")  I'm a software engineer based in Brazil that likes to create things.
+          p(data-aos="fade-up" data-aos-delay="200")  I also have a degree in Systems Analysis and Development from the Federal Institute of Education, Science and Technology in Rio Grande do Sul.
+          p(data-aos="fade-up" data-aos-delay="300")  I have a passion for competitive games, a deep appreciation for classic cars, and a love for exploring new places and cultures through travel.
 
-          h3 Get in touch
-            ul.social-links
+          h3(data-aos="fade-up" data-aos-delay="400") Get in touch
+            ul.social-links(data-aos="fade-up" data-aos-delay="500")
               li
                 a.social-link(href="mailto:joãovitorverzeletti@gmail.com", title="E-mail")
                   i.fas.fa-envelope
@@ -40,19 +40,20 @@ block content
                   i.fab.fa-instagram
                   span Instagram
 
-          a.btn.btn-success.mt-2(href="/cv.pdf", download) Download CV
+          a.btn.btn-success.mt-2(href="/cv.pdf", download data-aos="fade-up" data-aos-delay="400") Download CV
 
         .col-md-6
-          h3.mt-3 Experience
-          h5 Jun 2025 - Moment
-          strong Software Engineering Intern @ TJMRS
-          ul
-            li Implemented an XLSX to PDF converter for reports, used by over 90% of the client base.
-            li Started and led weekly tech presentation meetings to improve team skills and collaboration.
+          h3.mt-3(data-aos="fade-up" data-aos-delay="600") Experience
+          h5(data-aos="fade-up" data-aos-delay="700") Jun 2025 - Moment
+          strong(data-aos="fade-up" data-aos-delay="800") Software Engineering Intern @ TJMRS - TIC 
+          ul(data-aos="fade-up" data-aos-delay="900")
+            li Responsible for maintaining and improving internal web systems, ensuring their functionality, performance, and usability for internal users.
+            
+          h5(data-aos="fade-up" data-aos-delay="1000") Mar 2024 - Mar 2025
+          strong(data-aos="fade-up" data-aos-delay="1100") Help Desk Intern @ LogicBox 
+          ul(data-aos="fade-up" data-aos-delay="1200")
+            li As a Help Desk Technician at LogicBox, a company specializing in commercial automation solutions, I was responsible for providing technical support to clients using our point-of-sale systems, inventory management tools, and automation software.
+            li My role involved diagnosing hardware and software issues, guiding users through troubleshooting steps, and ensuring minimal downtime for retail operations. I also collaborated with the development and deployment teams to report bugs, suggest improvements, and assist in system updates and installations.
+            li This position required strong communication skills, problem-solving abilities, and a solid understanding of commercial automation technologies.
 
-          h5 Mar 2024 - Mar 2025
-          strong Help Desk @ LogicBox 
-          ul
-            li Refactored legacy code and implemented creational patterns which increased performance.
-            li Made other refactors like changing home versions, deleting deprecated features, etc.
-            li Mapped application permissions and discussed with product/design teams to fix permission-related issues.
+
