@@ -3,7 +3,11 @@ const session = require('express-session');
 const multer = require('multer');
 const bcrypt = require('bcryptjs');
 const path = require('path');
+
 const app = express();
+module.exports = app;
+
+
 
 app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
