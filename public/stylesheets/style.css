@@ -1,4 +1,4 @@
-/* stylesheets/style.css */
+
 
 html, body {
   height: 100%;
@@ -58,11 +58,11 @@ html, body {
 }
 
 .content {
-  flex: 1; /* Isso empurra o footer para o final */
+  flex: 1; 
   padding: 40px;
 }
 
-/* stylesheets/header.css */
+
 
 body {
   margin: 0;
@@ -140,7 +140,7 @@ body {
 }
 
 
-/* stylesheets/footer.css */
+
 
 .footer-container {
   margin-top: 40px;
@@ -150,7 +150,7 @@ body {
   color: #bbb;
   border-top: 1px solid #222;
 }
-/* Social icons */
+
 
 .social-links {
   list-style: none;
@@ -177,7 +177,7 @@ body {
 }
 
 .social-link:hover {
-  color: #00aced; /* ou outra cor de destaque */
+  color: #00aced;
 }
 
 
@@ -229,7 +229,7 @@ body {
 
 .timeline {
   position: relative;
-  padding-left: 60px; /* Aumenta espaço à esquerda do conteúdo */
+  padding-left: 60px; 
   border-left: 3px solid #0fc66c;
 }
 
@@ -240,7 +240,7 @@ body {
 
 .timeline-icon {
   position: absolute;
-  left: -30px; /* Centraliza o círculo na linha */
+  left: -30px; 
   top: 0;
   width: 32px;
   height: 32px;
@@ -260,7 +260,7 @@ body {
 }
 
 .timeline-content {
-  padding-left: 10px; /* Adiciona espaço entre a linha e o conteúdo */
+  padding-left: 10px; 
 }
 
 
