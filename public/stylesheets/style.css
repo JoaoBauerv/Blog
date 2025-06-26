@@ -230,7 +230,7 @@ body {
 .timeline {
   position: relative;
   padding-left: 40px;
-  border-left: 2px solid #0fc66c;
+  border-left: 3px solid #0fc66c;
 }
 
 .timeline-item {
@@ -240,12 +240,12 @@ body {
 
 .timeline-icon {
   position: absolute;
-  left: -28px;
-  top: 5px;
-  width: 40px;
-  height: 40px;
-  background-color: #1c1c1e;
+  left: -26px;
+  top: 0;
+  width: 32px;
+  height: 32px;
   border: 2px solid #0fc66c;
+  background-color: #1a1a1a;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -253,24 +253,35 @@ body {
 }
 
 .timeline-icon img {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  margin-left: 20px;
 }
 
 .timeline-content h5 {
-  margin: 0;
-  font-size: 1rem;
-  color: #aaa;
+  margin: 0 0 4px;
+  font-size: 0.95rem;
+  color: #ccc;
 }
 
 .timeline-content strong {
-  display: block;
   font-weight: 600;
-  margin-bottom: 8px;
+  display: block;
+  margin-bottom: 6px;
+  color: white;
 }
 
 .timeline-content ul {
   padding-left: 20px;
-  list-style-type: disc;
+  margin: 0;
+  color: #ccc;
+}
+
+.timeline-content ul li {
+  margin-bottom: 6px;
 }
