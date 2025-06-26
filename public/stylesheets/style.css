@@ -42,6 +42,11 @@ html, body {
   padding: 70px 30px;
   position: relative;
   z-index: 3;
+
+}
+
+.textleft{
+  text-align: justify;
 }
 
 
