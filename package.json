@@ -6,6 +6,7 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "bootstrap": "^5.3.7",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
