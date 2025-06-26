@@ -11,7 +11,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Rotas
 app.get('/', (_, res) => res.render('index'));
-app.get('/posts', (_, res) => res.render('posts'));
 
 
 //app.listen(3006, () => console.log('Servidor rodando em http://localhost:3006'));
