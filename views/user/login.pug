@@ -1,7 +1,7 @@
-extends layout.pug 
+extends ../layout.pug
 
 
-block content
+block main
   .page-wrapper
     main.content
       div.nome
@@ -13,7 +13,7 @@ block content
             div.mb-3
               input(type="password" name="senha" placeholder="Senha" required class="form-control")
             button(class="btn btn-primary w-100 py-2 mb-2" type="submit") Entrar
-            a(href="/register" class="btn btn-warning w-100 py-2") Registrar
+            
         if error
           p(style="color:red") #{error}
        

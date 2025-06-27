@@ -1,0 +1,17 @@
+extends ../layout.pug
+
+block main
+  .page-wrapper
+    main.content
+      div.nome
+        h1 Novo Post
+            form(method="POST" action="/post/new" enctype="multipart/form-data" class="p-4 border rounded shadow-sm")
+                div.mb-3
+                    input.form-control(type="text" name="titulo" placeholder="Título" required)
+                div.mb-3
+                    textarea.form-control(name="conteudo" placeholder="Conteúdo" required)
+                div.mb-3
+                    input.form-control(type="file" name="imagem")
+                .mb-3
+                button.btn.btn-primary(type="submit") Publicar
+                a.btn.btn-warning(href="/posts") Ver Posts

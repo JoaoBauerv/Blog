@@ -1,0 +1,24 @@
+extends ../layout.pug
+
+block main
+    h1.mb-4 Editar Perfil
+    .container.mt-4
+        form(action="/perfil/edit" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate)
+            .mb-3
+                label.form-label(for="nome") Nome:
+                input#nome.form-control(type="text" name="nome" required value=user.nome)
+            .mb-3
+                label.form-label(for="email") Email:
+                input#email.form-control(type="email" name="email" required value=user.email)
+            .mb-3
+                label.form-label(for="senha") Senha (deixe em branco para não alterar):
+                input#senha.form-control(type="password" name="senha" placeholder="Nova senha")
+            .mb-3
+                label.form-label(for="foto") Foto de Perfil:
+                input#foto.form-control(type="file" name="foto" accept="image/*")
+                if user.foto
+                    .mt-2
+                        img(src=`/uploads/${user.foto}` alt="Foto de perfil" width="120" class="img-thumbnail")
+            .d-flex.gap-2
+                button.btn.btn-primary(type="submit") Salvar Alterações
+                a.btn.btn-secondary(href=`/perfil/${user.id}`) Cancelar

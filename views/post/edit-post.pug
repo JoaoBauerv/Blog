@@ -1,0 +1,30 @@
+extends ../layout.pug
+
+block main
+  .container.mt-4
+    h1.mb-4 Editar Post
+
+    form(action="/post/edit" method="POST" enctype="multipart/form-data")
+      input(type="hidden" name="id" value=post.id)
+
+      .mb-3
+        label.form-label(for="title") Novo título:
+        input#title.form-control(type="text" name="title" required value=post.titulo)
+
+      .mb-3
+        label.form-label(for="content") Novo conteúdo:
+        textarea#content.form-control(name="content" rows="6" required)= post.conteudo
+
+      .mb-3
+        label.form-label Imagem atual:
+        if post.imagem
+          img(src=`/uploads/${post.imagem}`, alt="Imagem do post", style="max-width: 250px; display: block; margin-bottom: 10px;")
+        else
+          p.text-muted Nenhuma imagem enviada.
+
+        label.form-label(for="image") Substituir imagem:
+        input#image.form-control(type="file" name="image" accept="image/*")
+
+      .mt-4
+        button.btn.btn-primary(type="submit") Salvar Alterações
+        a.btn.btn-secondary.ms-2(href="/posts") Cancelar

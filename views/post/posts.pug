@@ -1,0 +1,33 @@
+extends ../layout.pug
+
+block main
+  .page-wrapper
+    main.content
+      h1.mb-4.text-white Posts
+
+      // Mostrar botão "Novo Post" somente para usuários logados
+      if user
+        a.btn.btn-success.mb-3(href="/post/new") Novo Post
+
+      .row.row-cols-1.row-cols-md-2.row-cols-lg-3.g-4
+        each post in posts
+          .col
+            .card.h-100.shadow
+              .card-body
+                .d-flex.align-items-center.mb-3
+                  if post.foto_autor
+                    img(src=`/uploads/${post.foto_autor}`, alt="Autor", width="60", height="60", class="rounded-circle me-3")
+                  else
+                    i.fas.fa-user-circle.fa-3x.me-3
+                  h5.mb-0= post.titulo
+
+                if post.imagem
+                  img(src=`/uploads/${post.imagem}`, class="img-fluid rounded mb-3", style="max-height: 250px; object-fit: cover; width: 100%")
+
+                p.card-text= post.conteudo
+
+              // Mostrar editar/excluir somente para usuário logado e dono do post
+              if user && user.id === post.id_user
+                .card-footer.bg-transparent.border-0.d-flex.justify-content-end.gap-2
+                  a.btn.btn-sm.btn-primary(href=`/post/edit/${post.id}`) Editar
+                  a.btn.btn-sm.btn-danger(href=`/post/delete/${post.id}` onclick="return confirm('Confirma exclusão?')") Excluir

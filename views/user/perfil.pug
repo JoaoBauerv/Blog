@@ -1,0 +1,35 @@
+extends ../layout.pug
+
+block main
+    .container.mt-5
+        .row.justify-content-center
+            .col-md-8
+                .card.shadow
+                    .card-header.bg-primary.text-white
+                        h2.mb-0 Perfil do Usuário
+                    .card-body
+                        if user
+                            .row
+                                .col-md-4.text-center
+                                    if user.foto
+                                        img.rounded-circle.border(src=`/uploads/${user.foto}`, alt="foto", width="150", height="150", style="object-fit:cover;")
+                                    else
+                                        img.rounded-circle.border(src="/images/default-user.png", alt="foto", width="150", height="150", style="object-fit:cover;")
+                                .col-md-8
+                                    ul.list-group.list-group-flush
+                                        li.list-group-item
+                                            strong Nome: 
+                                            |  #{user.nome}
+                                        li.list-group-item
+                                            strong Email: 
+                                            |  #{user.email}
+                                        // Adicione mais campos conforme necessário
+                            .mt-4.d-flex.justify-content-between
+                                a.btn.btn-outline-primary(href=`/perfil/edit/${user.id}`)
+                                    i.fas.fa-edit.mr-2
+                                    | Editar Perfil
+                                    
+                                    a.btn.btn-outline-danger(href=`/user/delete/${user.id}` onclick="return confirm('Tem certeza que deseja excluir o perfil? Seus post serão excluídos junto.')") Excluir perfil 
+                                     i.fas.fa-trash.mr-2
+                        else
+                            .alert.alert-warning Nenhum usuário logado.
